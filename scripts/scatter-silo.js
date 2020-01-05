@@ -36,7 +36,7 @@ const silo = extendContent(Block, "scatter-silo", {
         }
     },
     update(tile){
-        counter++;
+//        counter++;
     }
 })
 
