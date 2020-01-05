@@ -22,8 +22,9 @@ const silo = extendContent(Block, "scatter-silo", {
         //make sure this silo has the items it needs to fire
         if(tile.entity.cons.valid()){
             //make this effect occur at the tile location
-            Effects.effect(siloLaunchEffect, tile)
-
+            for (var k = 0; k < 3; k++){
+                Effects.effect(siloLaunchEffect, tile)
+            }
             //create 10 bullets at this tile's location with random rotation and velocity/lifetime
             for(var i = 0; i < 15; i++){
                 Calls.createBullet(Bullets.flakExplosive, tile.getTeam(), tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
@@ -31,6 +32,9 @@ const silo = extendContent(Block, "scatter-silo", {
             //triggering consumption makes it use up the items it requires
             //tile.entity.cons.trigger()
         }
+    },
+    update(tile){
+        
     }
 })
 
