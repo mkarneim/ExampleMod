@@ -29,7 +29,7 @@ const silo = extendContent(Block, "scatter-silo", {
                 Calls.createBullet(Bullets.flakExplosive, tile.getTeam(), tile.drawx(), tile.drawy(), Mathf.random(360), Mathf.random(0.5, 1.0), Mathf.random(0.2, 1.0))
             }
             //triggering consumption makes it use up the items it requires
-            tile.entity.cons.trigger()
+            //tile.entity.cons.trigger()
         }
     }
 })
