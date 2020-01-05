@@ -1,6 +1,6 @@
-name: "example-mod"
-displayName: "[orange]Example[gold] Mod" //what displays in the mod selection menu
-author: "Anuke"
-description: "A simple mod. Demonstrates how to make[accent] new ores[] and[orange] machines.[]"
-version: "3.0"
+name: "my-example-mod"
+displayName: "[orange]My Example[gold] Mod" //what displays in the mod selection menu
+author: "mkarneim"
+description: "An example mod. Derived by Anuken/ExampleMod. How to make[accent] new ores[] and[orange] machines.[]"
+version: "1.0"
 minGameVersion: "101"
