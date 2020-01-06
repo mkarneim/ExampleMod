@@ -9,7 +9,7 @@ const siloLaunchEffect = newEffect(200, e => {
 
 //create the block type
 const silo = extendContent(Block, "scatter-silo", {
-    counter:-10,
+    counter:0,
     //override the method to build configuration
     buildConfiguration(tile, table){
         table.addImageButton(Icon.arrowUpSmall, Styles.clearTransi, run(() => {
@@ -35,16 +35,11 @@ const silo = extendContent(Block, "scatter-silo", {
             //tile.entity.cons.trigger()
         }
     },
-    update(tile){
-        if ( (typeof(this.counter)!=='undefined') && (this.counter!==null) ){
-            print("counter="+this.counter);
-            this.counter++;     
-            if (this.counter%200==0) {
-                Effects.effect(siloLaunchEffect, tile);
-            }
-        } else {
-            print("counter not defined.");
-            this.counter = 0;
+    update(tile){        
+        //print("counter="+this.counter);
+        this.counter++;     
+        if (this.counter%100==0) {
+            Effects.effect(siloLaunchEffect, tile);
         }
     }
 })
