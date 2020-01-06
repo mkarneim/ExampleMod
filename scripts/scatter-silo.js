@@ -44,6 +44,7 @@ const silo = extendContent(Block, "scatter-silo", {
             }
         } else {
             print("counter not defined.");
+            var counter = 0;
         }
     }
 })
