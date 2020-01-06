@@ -46,6 +46,7 @@ const silo = extendContent(Block, "scatter-silo", {
         
         var time = Time.time();
         print("time="+time);
+        print("counter="+this.counter);
         
         this.counter++;     
         if (this.counter%100==0) {
