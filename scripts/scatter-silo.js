@@ -20,6 +20,7 @@ const silo = extendContent(Block, "scatter-silo", {
 
     //override configure event
     configured(tile, value){
+        print("just saying..");
         //make sure this silo has the items it needs to fire
         if(tile.entity.cons.valid()){
             //make this effect occur at the tile location
