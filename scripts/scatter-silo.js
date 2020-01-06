@@ -9,7 +9,6 @@ const siloLaunchEffect = newEffect(200, e => {
 
 //create the block type
 const silo = extendContent(Block, "scatter-silo", {
-    counter:0,
     //override the method to build configuration
     buildConfiguration(tile, table){
         table.addImageButton(Icon.arrowUpSmall, Styles.clearTransi, run(() => {
@@ -37,21 +36,15 @@ const silo = extendContent(Block, "scatter-silo", {
     },
     //override (empty) update method
     update(tile){        
-       // update your block here        
+        // update your block here        
+        if (Math.floor(Time.time())%100==0) {
+            Effects.effect(siloLaunchEffect, tile);
+        }
     },
     //override (non-empty) draw method
     draw(tile){        
         // this draws this block 
-        this.super$draw(tile); // ensure to call super.draw
-        
-        var time = Time.time();
-        print("time="+time);
-        print("counter="+this.counter);
-        
-        this.counter++;     
-        if (Math.floor(time)%100==0) {
-            Effects.effect(siloLaunchEffect, tile);
-        }
+        this.super$draw(tile); // ensure to call super.draw                
     }
 })
 
