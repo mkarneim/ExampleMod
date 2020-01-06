@@ -9,7 +9,7 @@ const siloLaunchEffect = newEffect(200, e => {
 
 //create the block type
 const silo = extendContent(Block, "scatter-silo", {
-    counter:0,
+    counter:-10,
     //override the method to build configuration
     buildConfiguration(tile, table){
         table.addImageButton(Icon.arrowUpSmall, Styles.clearTransi, run(() => {
