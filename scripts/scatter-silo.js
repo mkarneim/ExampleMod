@@ -41,6 +41,10 @@ const silo = extendContent(Block, "scatter-silo", {
         if (this.counter%100==0) {
             Effects.effect(siloLaunchEffect, tile);
         }
+    },
+    draw(tile){        
+        print("draw(tile)");
+        super$draw(tile);
     }
 })
 
