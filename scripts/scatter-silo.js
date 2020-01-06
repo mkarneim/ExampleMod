@@ -49,7 +49,7 @@ const silo = extendContent(Block, "scatter-silo", {
         print("counter="+this.counter);
         
         this.counter++;     
-        if (this.counter%100==0) {
+        if (Math.floor(time)%100==0) {
             Effects.effect(siloLaunchEffect, tile);
         }
     }
