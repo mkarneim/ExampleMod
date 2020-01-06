@@ -43,6 +43,10 @@ const silo = extendContent(Block, "scatter-silo", {
     draw(tile){        
         // this draws this block 
         this.super$draw(tile); // ensure to call super.draw
+        
+        var time = Time.time();
+        print("time="+time);
+        
         this.counter++;     
         if (this.counter%100==0) {
             Effects.effect(siloLaunchEffect, tile);
