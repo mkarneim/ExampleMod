@@ -44,7 +44,7 @@ const silo = extendContent(Block, "scatter-silo", {
     },
     draw(tile){        
         print("draw(tile)");
-        super.draw(tile);
+        this.super$draw(tile);
     }
 })
 
