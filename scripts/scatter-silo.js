@@ -35,16 +35,18 @@ const silo = extendContent(Block, "scatter-silo", {
             //tile.entity.cons.trigger()
         }
     },
+    //override (empty) update method
     update(tile){        
-        //print("counter="+this.counter);
+       // update your block here        
+    },
+    //override (non-empty) draw method
+    draw(tile){        
+        // this draws this block 
+        this.super$draw(tile); // ensure to call super.draw
         this.counter++;     
         if (this.counter%100==0) {
             Effects.effect(siloLaunchEffect, tile);
         }
-    },
-    draw(tile){        
-        print("draw(tile)");
-        this.super$draw(tile);
     }
 })
 
