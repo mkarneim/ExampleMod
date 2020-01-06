@@ -37,11 +37,14 @@ const silo = extendContent(Block, "scatter-silo", {
     },
     update(tile){
         if ( (typeof(counter)!=='undefined') && (counter!==null) ){
+            print("counter="+counter);
             counter++;     
             if (counter%200==0) {
                 Effects.effect(siloLaunchEffect, tile);
             }
-        }   
+        } else {
+            print("counter not defined.");
+        }
     }
 })
 
