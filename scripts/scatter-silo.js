@@ -9,7 +9,7 @@ const siloLaunchEffect = newEffect(200, e => {
 
 //create the block type
 const silo = extendContent(Block, "scatter-silo", {
-
+    counter:0,
     //override the method to build configuration
     buildConfiguration(tile, table){
         table.addImageButton(Icon.arrowUpSmall, Styles.clearTransi, run(() => {
@@ -20,7 +20,6 @@ const silo = extendContent(Block, "scatter-silo", {
 
     //override configure event
     configured(tile, value){
-        var counter = 0;
         //make sure this silo has the items it needs to fire
         if(tile.entity.cons.valid()){
             //make this effect occur at the tile location
